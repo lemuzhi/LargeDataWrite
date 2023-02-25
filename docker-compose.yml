@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  douyin-api:
+  LargeDataWrite:
     build: .
     command: --default-authentication-plugin=mysql_native_password #解决外部无法访问
     ports:
-      - 8080:8080
-    volumes:
-      - ./public:/go/src/douyin-api/public
+      - "44444:44444"
+#    volumes:
+#      - ./public:/go/src/douyin-api/public

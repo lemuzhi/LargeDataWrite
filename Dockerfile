@@ -2,9 +2,9 @@ FROM golang:1.18
 
 MAINTAINER "lemuzhi"
 
-WORKDIR /go/src/douyin-api
+WORKDIR /go/src/LargeDataWrite
 
-COPY . /go/src/douyin-api
+COPY . /go/src/LargeDataWrite
 
 RUN go env -w GO111MODULE=on \
     && go env -w GOPROXY=https://goproxy.cn,direct \
@@ -13,7 +13,6 @@ RUN go env -w GO111MODULE=on \
 #    && go mod tidy \
     && go build -o server .
 
-RUN chmod +x ./third_party/ffmpeg
 
-EXPOSE 8080
+EXPOSE 44444
 ENTRYPOINT ./server
